@@ -5,11 +5,12 @@
 
 package com.nutcake.pa.gui;
 
-import java.sql.SQLException;
-
-import com.nutcake.pa.dal.UserDAL;
 import com.nutcake.pa.bll.UserBLL;
 import com.nutcake.pa.entity.User;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 /**
  *
@@ -48,8 +49,13 @@ public class Login extends javax.swing.JFrame {
 				jButton3ActionPerformed(evt);
 			}
 		});
-
 		jButton4.setText("\u6ce8\u518c");
+        jButton4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                jButton4ActionPerformed(e);
+            }
+        });
 
 		jLabel1.setText("\u6b22\u8fce\u8fdb\u5165\u4e2a\u4eba\u4fe1\u606f\u52a9\u7406\u5de5\u5177");
 
@@ -232,6 +238,10 @@ public class Login extends javax.swing.JFrame {
 			}
 		}
 	}
+
+    private void jButton4ActionPerformed(ActionEvent evt) {
+        System.out.println(evt);
+    }
 
 	/**
 	 * @param args the command line arguments

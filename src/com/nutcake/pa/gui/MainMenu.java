@@ -11,10 +11,22 @@ package com.nutcake.pa.gui;
  * @author  __USER__
  */
 public class MainMenu extends javax.swing.JFrame {
+    private static MainMenu globalMenu;
+
+    public static MainMenu current() {
+        if (globalMenu == null)
+            globalMenu = new MainMenu();
+        return globalMenu;
+    }
+
+    private void setGlobal() {
+        globalMenu = this;
+    }
 
 	/** Creates new form MainMenu */
 	public MainMenu() {
 		initComponents();
+        setGlobal();
 	}
 
 	//GEN-BEGIN:initComponents
@@ -31,7 +43,7 @@ public class MainMenu extends javax.swing.JFrame {
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-		jLabel1.setFont(new java.awt.Font("ºÚÌå", 0, 24));
+		jLabel1.setFont(new java.awt.Font("ÂºÃšÃŒÃ¥", 0, 24));
 		jLabel1.setText("\u4e2a\u4eba\u4fe1\u606f\u52a9\u7406\u5de5\u5177");
 
 		jMenuBar1.setBackground(new java.awt.Color(153, 204, 255));

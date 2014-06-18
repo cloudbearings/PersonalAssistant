@@ -12,13 +12,13 @@ public class DB {
 	public static void connect()
 	{
 		try {
-			Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+			Class.forName("com.mysql.jdbc.Driver");
 			if (conn == null)
 				conn = DriverManager.getConnection(url, "", "");			
 			if (st == null)
 				st = conn.createStatement();			
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 	

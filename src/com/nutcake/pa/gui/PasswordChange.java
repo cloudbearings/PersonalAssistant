@@ -6,11 +6,10 @@
 
 package com.nutcake.pa.gui;
 
+import com.nutcake.pa.bll.UserBLL;
 import com.nutcake.pa.entity.User;
 
 import java.sql.SQLException;
-
-import com.nutcake.pa.bll.UserBLL;
 
 /**
  *
@@ -268,7 +267,7 @@ public class PasswordChange extends javax.swing.JFrame {
 
 	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
 		// TODO add your handling code here:
-		new MainMenu().setVisible(true);
+		MainMenu.current().setVisible(true);
 	}
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
